@@ -1,16 +1,5 @@
-.MPKMB{
-    position: relative;
-    width: 420px;
-    height: 116px;
-    font-family: Montserrat;
-    font-size: 95px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.2;
-    letter-spacing: normal;
-    text-align: left;
-    color: #ffffff;
+.img-mpkmb{
+    visibility: visible;
 }
 
 .slide-2-desc{
@@ -26,4 +15,19 @@
 .img-hover:hover{
     opacity: 0.5;
     transition: 0.2s;
+}
+
+.center-slide-1{
+    width: 50vw;
+    height: 50vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 768px){
+    .img-mpkmb{
+        visibility: hidden;
+    }
 }
