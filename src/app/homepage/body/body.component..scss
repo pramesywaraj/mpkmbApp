@@ -1,0 +1,29 @@
+.MPKMB{
+    position: relative;
+    width: 420px;
+    height: 116px;
+    font-family: Montserrat;
+    font-size: 95px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+
+.slide-2-desc{
+    position: relative;
+    right: 15vw;
+}
+
+.img-hover{
+    opacity: 1;
+    transition: 0.2s;
+}
+
+.img-hover:hover{
+    opacity: 0.5;
+    transition: 0.2s;
+}

@@ -1,0 +1,19 @@
+.logo-header-list{
+    display: block;
+}
+
+.logo-header{
+    display: block;
+    width: 8vw;
+    height: auto;
+}
+
+@media screen and (max-width: 991px){
+    .logo-header-list{
+        display: none;
+    }
+
+    .logo-header{
+        display: none;
+    }
+}
