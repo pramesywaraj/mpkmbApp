@@ -14,6 +14,7 @@ import { PenugasanComponent } from './penugasan/penugasan.component';
 import { GaleriComponent } from './galeri/galeri.component';
 import { KontakComponent } from './kontak/kontak.component';
 import { StoreComponent } from './store/store.component';
+import { BodyBukuComponent } from './buku/body-buku/body-buku.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { StoreComponent } from './store/store.component';
     GaleriComponent,
     KontakComponent,
     StoreComponent,
+    BodyBukuComponent,
   ],
   imports: [
     BrowserModule,
