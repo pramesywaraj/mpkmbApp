@@ -1,0 +1,10 @@
+.position-pc{
+    margin-left: 50vw;
+    visibility: visible;
+}
+
+@media screen and (max-width: 772px){
+    .position-pc{
+        visibility: hidden;
+    }
+}
