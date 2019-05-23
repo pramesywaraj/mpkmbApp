@@ -17,6 +17,9 @@ import { StoreComponent } from './store/store.component';
 import { BodyBukuComponent } from './buku/body-buku/body-buku.component';
 import { BodyBeritaComponent } from './berita/body-berita/body-berita.component';
 import { BodyPenugasanComponent } from './penugasan/body-penugasan/body-penugasan.component';
+import { BodyGaleriComponent } from './galeri/body-galeri/body-galeri.component';
+import { BodyKontakComponent } from './kontak/body-kontak/body-kontak.component';
+import { BodyStoreComponent } from './store/body-store/body-store.component';
 
 
 @NgModule({
@@ -35,6 +38,9 @@ import { BodyPenugasanComponent } from './penugasan/body-penugasan/body-penugasa
     BodyBukuComponent,
     BodyBeritaComponent,
     BodyPenugasanComponent,
+    BodyGaleriComponent,
+    BodyKontakComponent,
+    BodyStoreComponent,
   ],
   imports: [
     BrowserModule,
