@@ -20,6 +20,8 @@ import { BodyPenugasanComponent } from './penugasan/body-penugasan/body-penugasa
 import { BodyGaleriComponent } from './galeri/body-galeri/body-galeri.component';
 import { BodyKontakComponent } from './kontak/body-kontak/body-kontak.component';
 import { BodyStoreComponent } from './store/body-store/body-store.component';
+import { ArtikelComponent } from './artikel/artikel.component';
+import { BodyArtikelComponent } from './artikel/body-artikel/body-artikel.component';
 
 
 @NgModule({
@@ -41,6 +43,8 @@ import { BodyStoreComponent } from './store/body-store/body-store.component';
     BodyGaleriComponent,
     BodyKontakComponent,
     BodyStoreComponent,
+    ArtikelComponent,
+    BodyArtikelComponent,
   ],
   imports: [
     BrowserModule,

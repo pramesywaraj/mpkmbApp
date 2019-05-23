@@ -7,6 +7,7 @@ import { PenugasanComponent } from './penugasan/penugasan.component';
 import { GaleriComponent } from './galeri/galeri.component';
 import { KontakComponent } from './kontak/kontak.component';
 import { StoreComponent } from './store/store.component';
+import { ArtikelComponent } from './artikel/artikel.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,15 @@ const routes: Routes = [
   },
   { path: '',
     redirectTo: '/berita',
+    pathMatch: 'full'
+  },
+
+  {
+    path: 'artikel',
+    component: ArtikelComponent,
+  },
+  { path: '',
+    redirectTo: '/artikel',
     pathMatch: 'full'
   },
 
