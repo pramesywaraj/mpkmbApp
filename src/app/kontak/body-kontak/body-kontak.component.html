@@ -1,5 +1,5 @@
-  <!-- start page title section -->
-  <section class="p-0 one-third-screen position-relative wow fadeIn">
+<!-- start page title section -->
+<section class="p-0 one-third-screen position-relative wow fadeIn">
     <div class="opacity-medium bg-extra-dark-gray z-index-0"></div>
     <div class="container">
         <div class="row align-items-center">
@@ -12,7 +12,11 @@
                 <h1 class="alt-font text-white-2 font-weight-600 width-55 md-width-80 sm-width-100 mx-auto mb-0">Kontak Kami</h1>
                 <!-- end page title -->
             </div>
-            <div class="down-section text-center"><a href="#about" class="inner-link"><i class="ti-arrow-down icon-extra-small text-white-2 bg-deep-pink padding-15px-all sm-padding-10px-all rounded-circle"></i></a></div>
+            <div class="down-section text-center">
+                <button [ngx-scroll-to]="'#kontak'" class="inner-link btn btn-transparent">
+                    <i class="ti-arrow-down icon-extra-small text-white-2 bg-deep-pink padding-15px-all sm-padding-10px-all rounded-circle"></i>
+                </button>
+            </div>
         </div>
     </div>
     <div class="swiper-auto-fade swiper-container z-index-minus2 position-absolute top-0 w-100 h-100">
@@ -33,7 +37,7 @@
 <!-- end page title section -->
 
 <!-- start contact section -->
-<section class="no-padding bg-extra-dark-gray">
+<section id="kontak" class="no-padding bg-extra-dark-gray">
   <div class="container-fluid">
       <div class="row">
           <div class="col-12 col-lg-6 p-0 cover-background md-height-450px sm-height-350px wow fadeInLeft" style="background: url(http://placehold.it/1000x700)"></div>
