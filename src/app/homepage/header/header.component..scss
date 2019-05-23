@@ -8,6 +8,19 @@
     height: auto;
 }
 
+.store-show{
+    display: none;
+}
+
+.store-hover{
+    color: #000000;
+}
+
+.store-hover:hover {
+    color: #ffffff;
+    transition: 0.2s;
+}
+
 @media screen and (max-width: 991px){
     .logo-header-list{
         display: none;
@@ -15,5 +28,9 @@
 
     .logo-header{
         display: none;
+    }
+
+    .store-show{
+        display: block;
     }
 }
