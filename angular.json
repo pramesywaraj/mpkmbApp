@@ -30,6 +30,7 @@
               "src/styles.scss"
             ],
             "scripts": [
+              "../node_modules/moment/min/moment.min.js"
             ]
           },
           "configurations": {
@@ -86,7 +87,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
+            "scripts": [
+              
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"

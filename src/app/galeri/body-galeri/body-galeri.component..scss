@@ -1,3 +1,11 @@
+.galeri-web{
+    display: block;
+}
+
+.galeri-mobile{
+    display: none;
+}
+
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -18,4 +26,14 @@
 
 .title-position{
     padding-bottom: -50vh !important;
+}
+
+@media screen and (max-width: 768px){
+    .galeri-web{
+        display: none;
+    }
+
+    .galeri-mobile{
+        display: block;
+    }
 }
