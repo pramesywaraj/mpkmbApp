@@ -15,7 +15,7 @@ const routes: Routes = [
     component: HomepageComponent,
   },
   { path: '',
-    redirectTo: '/homepage',
+    redirectTo: 'homepage',
     pathMatch: 'full'
   },
 
@@ -24,7 +24,7 @@ const routes: Routes = [
     component: BukuComponent,
   },
   { path: '',
-    redirectTo: '/buku',
+    redirectTo: 'buku',
     pathMatch: 'full'
   },
 
@@ -33,7 +33,7 @@ const routes: Routes = [
     component: BeritaComponent,
   },
   { path: '',
-    redirectTo: '/berita',
+    redirectTo: 'berita',
     pathMatch: 'full'
   },
 
@@ -42,7 +42,7 @@ const routes: Routes = [
     component: ArtikelComponent,
   },
   { path: '',
-    redirectTo: '/artikel',
+    redirectTo: 'artikel',
     pathMatch: 'full'
   },
 
@@ -51,7 +51,7 @@ const routes: Routes = [
     component: PenugasanComponent,
   },
   { path: '',
-    redirectTo: '/penugasan',
+    redirectTo: 'penugasan',
     pathMatch: 'full'
   },
 
@@ -60,7 +60,7 @@ const routes: Routes = [
     component: GaleriComponent,
   },
   { path: '',
-    redirectTo: '/galeri',
+    redirectTo: 'galeri',
     pathMatch: 'full'
   },
 
@@ -69,7 +69,7 @@ const routes: Routes = [
     component: KontakComponent,
   },
   { path: '',
-    redirectTo: '/kontak',
+    redirectTo: 'kontak',
     pathMatch: 'full'
   },
 
@@ -78,7 +78,7 @@ const routes: Routes = [
     component: StoreComponent,
   },
   { path: '',
-    redirectTo: '/store',
+    redirectTo: 'store',
     pathMatch: 'full'
   },
 

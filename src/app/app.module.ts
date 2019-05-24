@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { AngularFireModule } from '@angular/fire';  
+import { environment } from '../environments/environment'; 
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -49,7 +52,9 @@ import { BodyArtikelComponent } from './artikel/body-artikel/body-artikel.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ScrollToModule.forRoot()
+    ScrollToModule.forRoot(),
+    AngularFireModule.initializeApp(environment.firebase),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

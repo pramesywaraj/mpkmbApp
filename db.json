@@ -1,0 +1,1301 @@
+{
+	"info": {
+		"_postman_id": "3ce09a12-465c-4183-bfbe-188855ae6e0e",
+		"name": "MPKMB",
+		"description": "Backend untuk website MPKMB IPB 56",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"admin@admin.com\",\n\t\"password\":\"qwerty12345\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+    },
+    
+		{
+			"name": "News",
+			"item": [
+				{
+					"name": "Create News",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJNUEtNQiIsInN1YiI6IjVjY2ZlNDI0N2I3Mjk5MDcxYzE0NmYwMyIsImlhdCI6MTU1ODI3NzUxNDkyNiwiZXhwIjoxNTU4NzA5NTE0OTI2LCJwcml2aWxlZ2UiOiJhZG1pbiJ9.alLUq3Xp9d_9RUn3k_ycpEALn6UCBl1ezKm1oqcHweI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Kilas Balik MPKMB 54",
+									"type": "text"
+								},
+								{
+									"key": "summary",
+									"value": "Lorem ipsum doller sit amet",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "Lorem ipsum doller sit amet lorem ipsum dolller sit amet lorem ipsum",
+									"type": "text"
+								},
+								{
+									"key": "snippet",
+									"value": "Lorem ipsum",
+									"type": "text"
+								},
+								{
+									"key": "coverImages",
+									"type": "file",
+									"src": "/D:/Pictures/320464.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/news/create",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"news",
+								"create"
+							]
+						}
+					},
+					"response": []
+        },
+        
+				{
+					"name": "Edit News",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJNUEtNQiIsInN1YiI6IjVjY2ZlNDI0N2I3Mjk5MDcxYzE0NmYwMyIsImlhdCI6MTU1ODI3NzUxNDkyNiwiZXhwIjoxNTU4NzA5NTE0OTI2LCJwcml2aWxlZ2UiOiJhZG1pbiJ9.alLUq3Xp9d_9RUn3k_ycpEALn6UCBl1ezKm1oqcHweI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Kilas Balik MPKMB 52",
+									"type": "text"
+								},
+								{
+									"key": "summary",
+									"value": "Lorem ipsum doller sit amet",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "Lorem ipsum doller sit amet lorem ipsum dolller sit amet lorem ipsum",
+									"type": "text"
+								},
+								{
+									"key": "snippet",
+									"value": "Lorem ipsum",
+									"type": "text"
+								},
+								{
+									"key": "coverImages",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/news/edit/5ce1730f88d5fb59bcced848",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"news",
+								"edit",
+								"5ce1730f88d5fb59bcced848"
+							]
+						}
+					},
+					"response": []
+        },
+        
+				{
+					"name": "Upload Other Images",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJNUEtNQiIsInN1YiI6IjVjY2ZlNDI0N2I3Mjk5MDcxYzE0NmYwMyIsImlhdCI6MTU1ODI3NzUxNDkyNiwiZXhwIjoxNTU4NzA5NTE0OTI2LCJwcml2aWxlZ2UiOiJhZG1pbiJ9.alLUq3Xp9d_9RUn3k_ycpEALn6UCBl1ezKm1oqcHweI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "multipart/form-data",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "description",
+									"value": "Lorem Ipsum",
+									"type": "text"
+								},
+								{
+									"key": "otherImages",
+									"type": "file",
+									"src": [
+										"///////D:/Pictures/0000023223s2 (2).jpg",
+										"///////D:/Pictures/320464.jpg",
+										"///////D:/Pictures/19756782_1448568518512284_403720169577995632_n.jpg",
+										"///////D:/Pictures/32853367_564558343937754_2199053015380393984_n.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/news/upload/otherImages/5ce1730f88d5fb59bcced848",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"news",
+								"upload",
+								"otherImages",
+								"5ce1730f88d5fb59bcced848"
+							]
+						}
+					},
+					"response": []
+        },
+        
+				{
+					"name": "Upload Body Images",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJNUEtNQiIsInN1YiI6IjVjY2ZlNDI0N2I3Mjk5MDcxYzE0NmYwMyIsImlhdCI6MTU1ODI3NzUxNDkyNiwiZXhwIjoxNTU4NzA5NTE0OTI2LCJwcml2aWxlZ2UiOiJhZG1pbiJ9.alLUq3Xp9d_9RUn3k_ycpEALn6UCBl1ezKm1oqcHweI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "bodyImages",
+									"type": "file",
+									"src": "/D:/Pictures/19756782_1448568518512284_403720169577995632_n.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/news/upload/bodyImages/5ce1799029724605906e3f4f",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"news",
+								"upload",
+								"bodyImages",
+								"5ce1799029724605906e3f4f"
+							]
+						}
+					},
+					"response": []
+        },
+        
+				{
+					"name": "All News",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/news/gets?page=1&limit=5&select=title summary imageCover&sort=-1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"news",
+								"gets"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "select",
+									"value": "title summary imageCover"
+								},
+								{
+									"key": "sort",
+									"value": "-1"
+								}
+							]
+						}
+					},
+					"response": []
+        },
+        
+				{
+					"name": "News Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/news/get/5ce1730f88d5fb59bcced848",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"news",
+								"get",
+								"5ce1730f88d5fb59bcced848"
+							]
+						}
+					},
+					"response": []
+        },
+        
+				{
+					"name": "Delete News",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJNUEtNQiIsInN1YiI6IjVjY2ZlNDI0N2I3Mjk5MDcxYzE0NmYwMyIsImlhdCI6MTU1ODI3NzUxNDkyNiwiZXhwIjoxNTU4NzA5NTE0OTI2LCJwcml2aWxlZ2UiOiJhZG1pbiJ9.alLUq3Xp9d_9RUn3k_ycpEALn6UCBl1ezKm1oqcHweI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/news/delete/5ce119ca98df868a20427d58",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"news",
+								"delete",
+								"5ce119ca98df868a20427d58"
+							]
+						}
+					},
+					"response": []
+        },
+        
+				{
+					"name": "Image",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/news/image/5ce10e03a1e1430ce432e1fa Body.jpg",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"news",
+								"image",
+								"5ce10e03a1e1430ce432e1fa Body.jpg"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+    },
+    
+		{
+			"name": "Store",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJNUEtNQiIsInN1YiI6IjVjY2ZlNDI0N2I3Mjk5MDcxYzE0NmYwMyIsImlhdCI6MTU1ODI3NzUxNDkyNiwiZXhwIjoxNTU4NzA5NTE0OTI2LCJwcml2aWxlZ2UiOiJhZG1pbiJ9.alLUq3Xp9d_9RUn3k_ycpEALn6UCBl1ezKm1oqcHweI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Baju 3",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "25.000",
+									"type": "text"
+								},
+								{
+									"key": "desc",
+									"value": "Baju biasa",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/Pictures/19756782_1448568518512284_403720169577995632_n.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/store/create",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"store",
+								"create"
+							]
+						}
+					},
+					"response": []
+        },
+        
+				{
+					"name": "Edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJNUEtNQiIsInN1YiI6IjVjY2ZlNDI0N2I3Mjk5MDcxYzE0NmYwMyIsImlhdCI6MTU1ODI3NzUxNDkyNiwiZXhwIjoxNTU4NzA5NTE0OTI2LCJwcml2aWxlZ2UiOiJhZG1pbiJ9.alLUq3Xp9d_9RUn3k_ycpEALn6UCBl1ezKm1oqcHweI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Celana 3",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "25.000",
+									"type": "text"
+								},
+								{
+									"key": "desc",
+									"value": "Baju biasa",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/Pictures/19756782_1448568518512284_403720169577995632_n.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/store/edit/5ce15ed40f246547fc0a9d0b",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"store",
+								"edit",
+								"5ce15ed40f246547fc0a9d0b"
+							]
+						}
+					},
+					"response": []
+        },
+        
+				{
+					"name": "All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/store/gets",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"store",
+								"gets"
+							]
+						}
+					},
+					"response": []
+        },
+        
+				{
+					"name": "Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/store/get/5ce15cdb2aa30b04142616d4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"store",
+								"get",
+								"5ce15cdb2aa30b04142616d4"
+							]
+						}
+					},
+					"response": []
+        },
+        
+				{
+					"name": "Image",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/store/image/5ce15ed40f246547fc0a9d0b.jpg",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"store",
+								"image",
+								"5ce15ed40f246547fc0a9d0b.jpg"
+							]
+						}
+					},
+					"response": []
+        },
+        
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJNUEtNQiIsInN1YiI6IjVjY2ZlNDI0N2I3Mjk5MDcxYzE0NmYwMyIsImlhdCI6MTU1ODI3NzUxNDkyNiwiZXhwIjoxNTU4NzA5NTE0OTI2LCJwcml2aWxlZ2UiOiJhZG1pbiJ9.alLUq3Xp9d_9RUn3k_ycpEALn6UCBl1ezKm1oqcHweI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/store/delete/5ce2da2748db50766c3594b1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"store",
+								"delete",
+								"5ce2da2748db50766c3594b1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+    },
+    
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJNUEtNQiIsInN1YiI6IjVjY2ZlNDI0N2I3Mjk5MDcxYzE0NmYwMyIsImlhdCI6MTU1ODI3NzUxNDkyNiwiZXhwIjoxNTU4NzA5NTE0OTI2LCJwcml2aWxlZ2UiOiJhZG1pbiJ9.alLUq3Xp9d_9RUn3k_ycpEALn6UCBl1ezKm1oqcHweI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Cakra 4\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/category/create",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"category",
+								"create"
+							]
+						}
+					},
+					"response": []
+        },
+        
+				{
+					"name": "Edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJNUEtNQiIsInN1YiI6IjVjY2ZlNDI0N2I3Mjk5MDcxYzE0NmYwMyIsImlhdCI6MTU1ODI3NzUxNDkyNiwiZXhwIjoxNTU4NzA5NTE0OTI2LCJwcml2aWxlZ2UiOiJhZG1pbiJ9.alLUq3Xp9d_9RUn3k_ycpEALn6UCBl1ezKm1oqcHweI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Cakra 4\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/category/edit/5ce2dc9e5ad6f114d097fb7e",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"category",
+								"edit",
+								"5ce2dc9e5ad6f114d097fb7e"
+							]
+						}
+					},
+					"response": []
+        },
+        
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/category/get?isPopulate=true",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"category",
+								"get"
+							],
+							"query": [
+								{
+									"key": "isPopulate",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+    },
+    
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJNUEtNQiIsInN1YiI6IjVjY2ZlNDI0N2I3Mjk5MDcxYzE0NmYwMyIsImlhdCI6MTU1ODI3NzUxNDkyNiwiZXhwIjoxNTU4NzA5NTE0OTI2LCJwcml2aWxlZ2UiOiJhZG1pbiJ9.alLUq3Xp9d_9RUn3k_ycpEALn6UCBl1ezKm1oqcHweI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Aturan SOP Peserta",
+									"type": "text"
+								},
+								{
+									"key": "categoryId",
+									"value": "5ce2cb860a04444bd851fe0d",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "MPKMB IPB 56 Kelompok dan Karya",
+									"type": "text"
+								},
+								{
+									"key": "img",
+									"type": "file",
+									"src": "/D:/Pictures/19756782_1448568518512284_403720169577995632_n.jpg"
+								},
+								{
+									"key": "url",
+									"value": "www.google.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/task/create",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"task",
+								"create"
+							]
+						}
+					},
+					"response": []
+        },
+        
+				{
+					"name": "Edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJNUEtNQiIsInN1YiI6IjVjY2ZlNDI0N2I3Mjk5MDcxYzE0NmYwMyIsImlhdCI6MTU1ODI3NzUxNDkyNiwiZXhwIjoxNTU4NzA5NTE0OTI2LCJwcml2aWxlZ2UiOiJhZG1pbiJ9.alLUq3Xp9d_9RUn3k_ycpEALn6UCBl1ezKm1oqcHweI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Panduan Penugasan MPKMB",
+									"type": "text"
+								},
+								{
+									"key": "categoryId",
+									"value": "5ce2cb860a04444bd851fe0d",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "MPKMB IPB 56 Kelompok dan Karya",
+									"type": "text"
+								},
+								{
+									"key": "img",
+									"type": "file",
+									"src": "/D:/Pictures/19756782_1448568518512284_403720169577995632_n.jpg"
+								},
+								{
+									"key": "url",
+									"value": "www.google.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/task/edit/5ce2d4cf25d6414fb8aa78c3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"task",
+								"edit",
+								"5ce2d4cf25d6414fb8aa78c3"
+							]
+						}
+					},
+					"response": []
+        },
+        
+				{
+					"name": "Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/task/get/5ce2d4cf25d6414fb8aa78c3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"task",
+								"get",
+								"5ce2d4cf25d6414fb8aa78c3"
+							]
+						}
+					},
+					"response": []
+        },
+        
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/task/delete/5ce2d4cf25d6414fb8aa78c3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"task",
+								"delete",
+								"5ce2d4cf25d6414fb8aa78c3"
+							]
+						}
+					},
+					"response": []
+        },
+        
+				{
+					"name": "Image",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/task/image/5ce2d4cf25d6414fb8aa78c3.jpg",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"task",
+								"image",
+								"5ce2d4cf25d6414fb8aa78c3.jpg"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+    },
+    
+		{
+			"name": "Timeline",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJNUEtNQiIsInN1YiI6IjVjY2ZlNDI0N2I3Mjk5MDcxYzE0NmYwMyIsImlhdCI6MTU1ODI3NzUxNDkyNiwiZXhwIjoxNTU4NzA5NTE0OTI2LCJwcml2aWxlZ2UiOiJhZG1pbiJ9.alLUq3Xp9d_9RUn3k_ycpEALn6UCBl1ezKm1oqcHweI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Pertemuan Ketiga\",\n\t\"body\": \"Lorem ipsum doler sit amet hahaha\",\n\t\"date\": \"2019-08-29T17:00:00.000Z\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/timeline/create",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"timeline",
+								"create"
+							]
+						}
+					},
+					"response": []
+        },
+        
+				{
+					"name": "Edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJNUEtNQiIsInN1YiI6IjVjY2ZlNDI0N2I3Mjk5MDcxYzE0NmYwMyIsImlhdCI6MTU1ODI3NzUxNDkyNiwiZXhwIjoxNTU4NzA5NTE0OTI2LCJwcml2aWxlZ2UiOiJhZG1pbiJ9.alLUq3Xp9d_9RUn3k_ycpEALn6UCBl1ezKm1oqcHweI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Pertemuan Kedua\",\n\t\"body\": \"Lorem ipsum doler sit amet hahaha\",\n\t\"date\": \"2019-08-28T17:00:00.000Z\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/timeline/edit/5ce3816af4089416cc9aaead",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"timeline",
+								"edit",
+								"5ce3816af4089416cc9aaead"
+							]
+						}
+					},
+					"response": []
+        },
+        
+				{
+					"name": "Detail",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/timeline/detail/5ce3816af4089416cc9aaead",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"timeline",
+								"detail",
+								"5ce3816af4089416cc9aaead"
+							]
+						}
+					},
+					"response": []
+        },
+        
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/timeline/list",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"timeline",
+								"list"
+							]
+						}
+					},
+					"response": []
+        },
+        
+				{
+					"name": "Nearest",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/timeline/nearest",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"timeline",
+								"nearest"
+							]
+						}
+					},
+					"response": []
+        },
+        
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/timeline/delete/5ce3816af4089416cc9aaead",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"timeline",
+								"delete",
+								"5ce3816af4089416cc9aaead"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+    },
+    
+		{
+			"name": "Galery",
+			"item": [
+				{
+					"name": "Video",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJNUEtNQiIsInN1YiI6IjVjY2ZlNDI0N2I3Mjk5MDcxYzE0NmYwMyIsImlhdCI6MTU1ODI3NzUxNDkyNiwiZXhwIjoxNTU4NzA5NTE0OTI2LCJwcml2aWxlZ2UiOiJhZG1pbiJ9.alLUq3Xp9d_9RUn3k_ycpEALn6UCBl1ezKm1oqcHweI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"title\": \"After Movie MPKMB 55\",\n\t\"url\": \"youtube.com\",\n\t\"status\": \"false\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/galery/video/create",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"galery",
+										"video",
+										"create"
+									]
+								}
+							},
+							"response": []
+            },
+            
+						{
+							"name": "Edit",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJNUEtNQiIsInN1YiI6IjVjY2ZlNDI0N2I3Mjk5MDcxYzE0NmYwMyIsImlhdCI6MTU1ODI3NzUxNDkyNiwiZXhwIjoxNTU4NzA5NTE0OTI2LCJwcml2aWxlZ2UiOiJhZG1pbiJ9.alLUq3Xp9d_9RUn3k_ycpEALn6UCBl1ezKm1oqcHweI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"status\": \"true\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/galery/video/edit/5ce3b39e9bdd654550f8636d",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"galery",
+										"video",
+										"edit",
+										"5ce3b39e9bdd654550f8636d"
+									]
+								}
+							},
+							"response": []
+            },
+            
+						{
+							"name": "List",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/galery/video/list",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"galery",
+										"video",
+										"list"
+									]
+								}
+							},
+							"response": []
+            },
+            
+						{
+							"name": "Detail",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/galery/video/detail/5ce3afae4b53635c20dc8374",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"galery",
+										"video",
+										"detail",
+										"5ce3afae4b53635c20dc8374"
+									]
+								}
+							},
+							"response": []
+            },
+            
+						{
+							"name": "Delete",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/galery/video/delete/5ce3b84bd5090435808dc3d8",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"galery",
+										"video",
+										"delete",
+										"5ce3b84bd5090435808dc3d8"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		}
+  ],
+  
+	"variable": [
+		{
+			"id": "d6544984-13c5-49b1-8c7c-87e5e4c4aa49",
+			"key": "base_url",
+			"value": "localhost:3000",
+			"type": "string"
+		}
+	]
+}
