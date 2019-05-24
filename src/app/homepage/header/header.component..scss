@@ -1,4 +1,5 @@
 .logo-header-list{
+    padding-top: 2vh;
     display: block;
 }
 
@@ -19,6 +20,10 @@
 .store-hover:hover {
     color: #ffffff;
     transition: 0.2s;
+}
+
+.position-pc{
+    padding-top: 1vh;
 }
 
 @media screen and (max-width: 991px){

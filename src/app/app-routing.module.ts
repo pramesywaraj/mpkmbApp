@@ -23,63 +23,35 @@ const routes: Routes = [
     path: 'buku',
     component: BukuComponent,
   },
-  { path: '',
-    redirectTo: 'buku',
-    pathMatch: 'full'
-  },
 
   {
     path: 'berita',
     component: BeritaComponent,
-  },
-  { path: '',
-    redirectTo: 'berita',
-    pathMatch: 'full'
   },
 
   {
     path: 'artikel',
     component: ArtikelComponent,
   },
-  { path: '',
-    redirectTo: 'artikel',
-    pathMatch: 'full'
-  },
 
   {
     path: 'penugasan',
     component: PenugasanComponent,
-  },
-  { path: '',
-    redirectTo: 'penugasan',
-    pathMatch: 'full'
   },
 
   {
     path: 'galeri',
     component: GaleriComponent,
   },
-  { path: '',
-    redirectTo: 'galeri',
-    pathMatch: 'full'
-  },
 
   {
     path: 'kontak',
     component: KontakComponent,
   },
-  { path: '',
-    redirectTo: 'kontak',
-    pathMatch: 'full'
-  },
 
   {
     path: 'store',
     component: StoreComponent,
-  },
-  { path: '',
-    redirectTo: 'store',
-    pathMatch: 'full'
   },
 
 ];
