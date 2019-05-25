@@ -14,7 +14,6 @@ export class HeaderComponent implements OnInit {
   }
 
   gotoStore(){
-    console.log("Test : Clicked!")
     this.router.navigate(["/store"]);
   }
 
