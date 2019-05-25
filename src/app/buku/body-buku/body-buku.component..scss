@@ -3,8 +3,24 @@
     visibility: visible;
 }
 
+.desktop-view{
+    display: block;
+}
+
+.mobile-view{
+    display: none;
+}
+
 @media screen and (max-width: 772px){
     .position-pc{
         visibility: hidden;
+    }
+
+    .desktop-view{
+        display: none;
+    }
+    
+    .mobile-view{
+        display: block;
     }
 }
