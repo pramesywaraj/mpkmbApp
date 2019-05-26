@@ -15,10 +15,10 @@ export class HomepageComponent implements OnInit {
   }
 
   getTimeline(){
-    console.log('check boi');
-    this.timeline.timeline().subscribe((data)=>{
-      console.log('test', data);
-    });
+    // console.log('check boi');
+    // this.timeline.timeline().subscribe((data)=>{
+    //   console.log('test', data);
+    // });
   }
 
 

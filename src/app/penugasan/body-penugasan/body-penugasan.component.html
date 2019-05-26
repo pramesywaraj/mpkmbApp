@@ -882,73 +882,33 @@
 </section>
 <!-- end blockquote style 02 section -->
 
-<!-- start Event Timeline section --> 
-<section class="wow fadeIn">
-    <div class="container" style="height: 50vh;"> 
-        <div class="row"> 
-            <div class="col-12">
-                <div class="swiper-number-pagination swiper-container black-move">
-                    <div class="bg-transparent-white opacity-full-dark z-index-5 d-none d-lg-block"></div>
-                    <div class="col-12 col-lg-12 text-center">
-                        <div class="position-relative overflow-hidden w-100">
-                            <span class="text-large text-outside-line-full alt-font font-weight-600 text-uppercase">Timeline Terdekat</span>
-                        </div>
-                    </div>
-                    <div class="swiper-wrapper">
+<!-- start feature box section -->
+<section class="p-0 wow fadeIn bg-extra-dark-gray">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-6 cover-background md-height-500px sm-height-350px wow fadeIn" style="background-image:url('../../../assets/img/galeri/mpkmb-3.webp');"><div class="sm-height-400px"></div></div>
 
-                        <!-- start slider item -->
-                        <div class="swiper-slide">
-                            <div class="slider-half-small-screen position-relative bg-white">
-                                <div class="slider-typography text-left">
-                                    <div class="slider-text-middle-main">
-                                        <div class="slider-text-middle">
-                                            <span class="text-extra-large text-middle-line font-weight-300 text-deep-pink d-block w-50 sm-width-65">DD-MM-YYYY</span>
-                                            <h2 class="text-extra-dark-gray w-50 d-inline-block font-weight-300 letter-spacing-minus-1 lg-width-70 sm-width-80">Ngumpulin Tugas</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end slider item -->
-
-                        <!-- start slider item -->
-                        <div class="swiper-slide">
-                            <div class="slider-half-small-screen position-relative bg-white">
-                                <div class="slider-typography text-left">
-                                    <div class="slider-text-middle-main">
-                                        <div class="slider-text-middle">
-                                            <span class="text-extra-large text-middle-line font-weight-300 text-deep-pink d-block w-50 sm-width-65">DD-MM-YYYY</span>
-                                            <h2 class="text-extra-dark-gray w-50 d-inline-block font-weight-300 letter-spacing-minus-1 lg-width-70 sm-width-80">Kumpul Perdana</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end slider item -->
-
-                        <!-- start slider item -->
-                        <div class="swiper-slide">
-                            <div class="slider-half-small-screen position-relative bg-white">
-                                <div class="slider-typography text-left">
-                                    <div class="slider-text-middle-main">
-                                        <div class="slider-text-middle">
-                                            <span class="text-extra-large text-middle-line font-weight-300 text-deep-pink d-block w-50 sm-width-65">DD-MM-YYYY</span>
-                                            <h2 class="text-extra-dark-gray w-50 d-inline-block font-weight-300 letter-spacing-minus-1 lg-width-70 sm-width-80">Acara Puncak</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end slider item -->
-                    </div>
-                    <div class="swiper-pagination swiper-number"></div>
+            <div class="col-12 col-lg-6 padding-five-tb padding-five-half-lr lg-padding-50px-tb md-padding-70px-tb md-padding-15px-lr wow fadeIn">
+                <div class="row m-0">
+                <div class="col-12 margin-four-bottom lg-margin-six-bottom md-margin-40px-bottom sm-margin-30px-bottom sm-no-padding-lr text-center text-md-center">
+                    <h4 class="alt-font text-white-2 text-center text-lg-center md-width-70 mx-auto mx-lg-0 md-no-margin-bottom sm-width-100 font-weight-700">Timeline Terdekat</h4>
                 </div>
-            </div>
+
+                <!-- start feature box item -->
+                <div class="col-12 col-xl-12 col-lg-12 col-md-12 margin-six-bottom md-margin-30px-bottom sm-no-padding last-paragraph-no-margin text-center text-md-left" *ngFor="let data of timelines; let i = index">
+                    <div class="text-light-gray margin-10px-bottom md-margin-5px-bottom alt-font"><span class="text-deep-pink margin-15px-right float-left text-large d-block d-md-inline-block sm-width-100">{{data.date | date:'dd MMMM yyyy'}} &minus; {{data.title}}</span></div>
+                    <br>
+                    <p>{{data.body}}</p>
+                </div>
+                <!-- end feature box item -->
+                
+                </div>
+            </div> 
         </div>
     </div>
 </section>
-<!-- end Event Timeline section --> 
-    
+<!-- end feature box section -->
+        
 <!-- start slider section -->
 <section id="homepage-1" class="no-padding main-slider mobile-height wow fadeIn" style="max-height: 40vh;">
     <div class="swiper-container width-100">
