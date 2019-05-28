@@ -28,7 +28,7 @@ export class BeritaService {
       );
   }  
 
-  public getNewsDetail(id): Observable<any> {
+  public getNewsDetail(id:number): Observable<any> {
     return this.http.get<any>(
       this.configService.baseUrl + 'news/get/' + id
     ).pipe(

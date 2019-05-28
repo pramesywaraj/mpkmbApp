@@ -8,9 +8,9 @@
                   <div class="col-12 col-xl-6 col-lg-7 bg-deep-pink-opacity width-500px height-200px lg-padding-seven-lr padding-five-tb position-pc">
                       <div class="box-separator-line width-180px bg-white lg-width-120px md-width-90px d-none d-lg-block"></div>
   
-                      <p class="font-weight-600 alt-font text-white-2 width-95 md-width-100" style="font-size: 2em;">Judul Berita</p>
+                      <p class="font-weight-600 alt-font text-white-2 width-95 md-width-100" style="font-size: 2em;">{{newsDetail.title}}</p>
   
-                      <p class="text-large font-weight-300 text-white-2 width-75 lg-width-85 md-width-95 sm-width-100 d-none d-md-block">Hari, XX Bulan YYYY</p>
+                      <p class="text-large font-weight-300 text-white-2 width-75 lg-width-85 md-width-95 sm-width-100 d-none d-md-block">{{newsDetail.date | date:'dd MMMM yyyy'}}</p>
                   </div> 
                 </div>
           </div>
@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="col-12 col-lg-8 pr-0 text-large md-no-padding-lr text-center text-md-left">
-                  <p class="text-large line-height-30 text-medium-gray text-center text-md-justify sm-line-height-26">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga autem eius, hic tempore neque vel beatae facilis quaerat excepturi, minima odio dolore! Atque non quo illo, odio est vel consequuntur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quis ex aspernatur ab sunt repellat in ratione. Suscipit fugiat, sed laborum debitis, soluta dolores ipsum hic quae, corporis dignissimos unde! Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus impedit repudiandae illum, incidunt tenetur sapiente ad itaque odio, ipsa cupiditate saepe omnis voluptatibus! Ipsum beatae, nihil voluptatem earum illum non. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium sunt aliquam corrupti sed voluptates, suscipit quibusdam rerum inventore molestiae, ullam fugiat ducimus, debitis mollitia consequatur. Maiores, cupiditate! Nesciunt, odio modi.</p>
+                  <p class="text-large line-height-30 text-medium-gray text-center text-md-justify sm-line-height-26">{{newsDetail.body1}}</p>
                 </div>
             </div>
         </div>
@@ -59,11 +59,11 @@
         <div class="row">
             <div class="col-12 col-lg-10 d-flex flex-wrap mx-auto last-paragraph-no-margin text-center text-md-left">
                 <div class="col-12 col-lg-5 pl-0 text-large md-no-padding-lr md-margin-30px-bottom">
-                    <p class="text-large line-height-30 text-medium-gray text-center text-md-justify sm-line-height-26">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, ab minima! Aliquid unde architecto, omnis, quisquam, rem exercitationem fuga reiciendis quam voluptatibus aliquam minima aperiam dolore voluptatem sunt alias quis.</p>
+                    <p class="text-large line-height-30 text-medium-gray text-center text-md-justify sm-line-height-26">{{newsDetail.body2}}</p>
                 </div>
 
                 <div class="col-12 col-lg-7 pr-0 text-large md-no-padding-lr text-center text-md-left">
-                    <p class="text-large line-height-30 text-medium-gray text-center text-md-justify sm-line-height-26">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum placeat officiis laborum. Amet harum placeat, eos, mollitia laudantium odio, quam rerum ut esse provident explicabo asperiores in possimus molestiae officia.</p>
+                    <p class="text-large line-height-30 text-medium-gray text-center text-md-justify sm-line-height-26">{{newsDetail.body3}}</p>
                 </div>
             </div>
         </div>

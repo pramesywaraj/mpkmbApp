@@ -33,6 +33,15 @@ export class BodyStoreComponent implements OnInit {
     this.getItem();
   }
 
+  formatURL(data){
+    return data.split(' ').join('%20');
+  }
+
+  formatImageSrc(data){
+    // console.log("final", this.configService.baseUrl + "store/image/" + this.formatURL(data))
+    return this.configService.baseUrl + "store/image/" + this.formatURL(data)
+  }
+
   getItem(){
     this.store.getStoreItem().subscribe((data)=>{
       this.stores = data.stores.docs;
@@ -53,13 +62,5 @@ export class BodyStoreComponent implements OnInit {
           alert("Data anda Salah");
     })
   }  
-
-  // getImage(url){
-  //   this.store.getStoreImage(url).subscribe((data)=>{
-  //     this.stores = data.stores.docs;
-
-  //     console.log("Cek Items : ", this.stores);
-  //   });
-  // }
 
 }

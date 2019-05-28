@@ -107,10 +107,10 @@
                     <div class="row text-center">
                         <!-- start portfolio item -->
                         <div class="col-12 col-sm-12 col-md-6 col-lg-3 text-center" *ngFor="let data of allNews">
-                            <div class="grid-item wow zoomIn">
-                                <a href="artikel">
+                            <div (click)="getData(data)" class="grid-item wow zoomIn">
+                                <a href="artikel/{{data._id}}" target="_blank">
                                     <figure>
-                                        <img src="http://placehold.it/300x300" alt="" style="width: 300px; height: 300px"/>
+                                        <img [src]="formatImageSrc(data?.imageCover)" alt="" style="width: 300px; height: 300px"/>
                                         <figcaption style="margin-bottom: 3vh;">
                                             <div class="portfolio-hover-main text-center">
                                                 <div class="portfolio-hover-box vertical-align-bottom">

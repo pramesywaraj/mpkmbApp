@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TimelineService } from 'src/app/services/timeline.service';
 import { PenugasanService } from 'src/app/services/penugasan.service';
 import { DomSanitizer } from '@angular/platform-browser';
+import { ConfigService } from 'src/app/services/config.service';
 
 @Component({
   selector: 'app-body-penugasan',
@@ -10,7 +11,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class BodyPenugasanComponent implements OnInit {
 
-  constructor(public timeline: TimelineService, public penugasan: PenugasanService, private sanitizer: DomSanitizer) {   }
+  constructor(public timeline: TimelineService, public penugasan: PenugasanService, private sanitizer: DomSanitizer, private configService: ConfigService) {   }
 
   timelines = [];
   categories = [];
@@ -18,6 +19,15 @@ export class BodyPenugasanComponent implements OnInit {
   ngOnInit() {
     this.getTimeline();
     this.getAllCategories();
+  }
+
+  formatURL(data){
+    return data.split(' ').join('%20');
+  }
+
+  formatImageSrc(data){
+    // console.log("final", this.configService.baseUrl + "store/image/" + this.formatURL(data))
+    return this.configService.baseUrl + "task/image/" + this.formatURL(data);
   }
 
   getTimeline(){
@@ -46,24 +56,5 @@ export class BodyPenugasanComponent implements OnInit {
     });
   }
 
-  // getImage(id){
-  //   id = "5cec670c229d4b69a848b62d.jpg";
-  //   this.penugasan.getImage(id).subscribe((data)=>{
-  //     // this.categories = data.categories;
-
-  //     console.log("Cek Gambar : ", data);
-  //   });
-
-  // }
-
-  // imageUrl(i) {
-  //   let url = this.categories[0].tasks[i].url
-  //   return this.sanitizer.bypassSecurityTrustResourceUrl(url);
-  // }  
-
-  // imageUrl2(i, j) {
-  //   let url = this.categories[i].tasks[j].url
-  //   return this.sanitizer.bypassSecurityTrustResourceUrl(url);
-  // }  
 
 }

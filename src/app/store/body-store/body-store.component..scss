@@ -2,6 +2,10 @@
     display: none;
 }
 
+.center-cropped {
+    object-fit: cover;
+}
+
 @media screen and (min-width: 767px){
     .scroll-down-mobile{
         margin-top: 0vh !important;

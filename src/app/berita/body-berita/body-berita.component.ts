@@ -4,6 +4,7 @@ import { BeritaService } from 'src/app/services/berita.service';
 
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
+import { ConfigService } from 'src/app/services/config.service';
 
 @Component({
   selector: 'app-body-berita',
@@ -15,20 +16,32 @@ export class BodyBeritaComponent implements OnInit {
   newsDetail: any;
   timelines = [];
   allNews = [];
+  dataLocal: any;
   
   // News Highlight
   highlight = [];  
 
   constructor(public timeline: TimelineService, public news: BeritaService, private route: ActivatedRoute,
-    private router: Router) {
+    private router: Router, private configService: ConfigService) {
   }
 
   ngOnInit() {
+    this.dataLocal = JSON.parse(localStorage.getItem('newsDetail'));
+    console.log("Cek Data Local : ", this.dataLocal);
+
     this.getTimeline();
     this.getAllNews();
 
-    let id = this.route.snapshot.paramMap.get('id');
-    this.getNewsDetail(id);
+    this.getNewsDetail(this.dataLocal._id);
+  }
+
+  formatURL(data){
+    return data.split(' ').join('%20');
+  }
+
+  formatImageSrc(data){
+    // console.log("final", this.configService.baseUrl + "store/image/" + this.formatURL(data))
+    return this.configService.baseUrl + "news/image/" + this.formatURL(data);
   }
 
   getTimeline(){
@@ -76,4 +89,9 @@ export class BodyBeritaComponent implements OnInit {
       }
     });
   }  
+
+  getData(data){
+    localStorage.setItem('newsDetail', JSON.stringify(data));
+    console.log("Cek News Detail : ", data);
+  }
 }

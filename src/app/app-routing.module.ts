@@ -30,7 +30,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'artikel',
+    path: 'artikel/:id',
     component: ArtikelComponent,
   },
 
@@ -52,6 +52,11 @@ const routes: Routes = [
   {
     path: 'store',
     component: StoreComponent,
+  },
+
+  {
+    path: '**',
+    redirectTo: 'homepage'
   },
 
 ];

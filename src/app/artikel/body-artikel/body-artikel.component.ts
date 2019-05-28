@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ConfigService } from 'src/app/services/config.service';
+import { BeritaService } from 'src/app/services/berita.service';
 
 @Component({
   selector: 'app-body-artikel',
@@ -9,11 +10,26 @@ import { ConfigService } from 'src/app/services/config.service';
 })
 export class BodyArtikelComponent implements OnInit {
 
-  constructor(private httpClient: HttpClient, private configService: ConfigService) { }
+  newsDetail = [];
+  id: any;
+  dataLocal : any;
+
+  constructor(private httpClient: HttpClient, private configService: ConfigService, public berita: BeritaService) { }
 
   ngOnInit() {
-    let url = this.configService.baseUrl
-    console.log("Cek : ", url);
+    this.dataLocal = JSON.parse(localStorage.getItem('newsDetail'));
+    console.log("Cek Data Local : ", this.dataLocal);
+
+    this.getNewsDetail(this.dataLocal._id);
+
   }
+
+  getNewsDetail(id) {
+    this.berita.getNewsDetail(id).subscribe(data => {
+      this.newsDetail = data.news;
+      console.log("Cek Detail Berita : ", this.newsDetail);
+    });
+  }  
+
 
 }
