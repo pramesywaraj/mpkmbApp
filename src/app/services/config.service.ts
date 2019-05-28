@@ -9,7 +9,7 @@ export class ConfigService {
 
   constructor() { 
     // this.baseUrl = "http://backend-mpkmb.codepanda.id/";
-    this.baseUrl = "http://172.18.16.52:3056/";
+    this.baseUrl = "http://localhost:3056/";
     
   }
 }
