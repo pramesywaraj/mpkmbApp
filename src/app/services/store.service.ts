@@ -28,4 +28,29 @@ export class StoreService {
       );
   }  
 
+  public getStoreImage(url): Observable<any> {
+    return this.http.get<any>(
+      this.configService.baseUrl + 'store/image/' + url)
+      .pipe(
+        map(resp => {
+          return resp;
+        })
+      );
+  }  
+
+  public postOrderItem(data): Observable<any> {
+    return this.http.post<any>(
+      this.configService.baseUrl + 'order/create', JSON.stringify(data), this.httpOptions)
+      .pipe(
+        map(resp => {
+          if(resp.status == 200) {
+            alert("Pemesanan Berhasil Direkam, Terimakasih")
+            return resp;
+          }
+          
+          return resp;
+        })
+      );
+  }
+
 }

@@ -4,6 +4,7 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { AngularFireModule } from '@angular/fire';  
 import { environment } from '../environments/environment'; 
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -54,7 +55,9 @@ import { BodyArtikelComponent } from './artikel/body-artikel/body-artikel.compon
     AppRoutingModule,
     ScrollToModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
