@@ -1,0 +1,140 @@
+<!-- start parallax hero section -->
+<section class="wow fadeIn p-0 parallax sm-background-image-center" data-stellar-background-ratio="0.5" [ngStyle]="{'background-image': 'url(' + imageUrl(newsDetail.imageCover) + ')'}">
+  <div class="opacity-extra-medium bg-black"></div>
+  <div class="container-fluid position-relative full-screen">
+      <div class="slider-typography">
+          <div class="slider-text-middle-main">
+              <div class="slider-text-bottom">
+                  <div class="col-12 col-xl-6 col-lg-7 bg-deep-pink-opacity width-500px height-200px lg-padding-seven-lr padding-five-tb position-pc">
+                      <div class="box-separator-line width-180px bg-white lg-width-120px md-width-90px d-none d-lg-block"></div>
+  
+                      <p class="font-weight-600 alt-font text-white-2 width-95 md-width-100" style="font-size: 2em;">{{newsDetail.title}}</p>
+  
+                      <p class="text-large font-weight-300 text-white-2 width-75 lg-width-85 md-width-95 sm-width-100 d-none d-md-block">{{newsDetail.date | date:'dd MMMM yyyy'}}</p>
+                  </div> 
+                </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- end parallax hero section -->
+
+<!-- start section -->
+<section class="wow fadeIn">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-10 d-flex flex-wrap mx-auto last-paragraph-no-margin text-center text-md-left">
+                <div class="col-12 col-lg-4 pl-0 text-center text-large md-no-padding-lr md-margin-30px-bottom">
+                  <!-- start blockquote -->
+                  <p class="text-extra-dark-gray margin-50px-bottom md-margin-20px-bottom alt-font">
+                    <i class="fas fa-quote-left text-light-gray icon-medium margin-15px-bottom"></i>
+                    Apa yang mendefinisikan siapa kita, tidak ada artinya dibandingkan apa yang menyatukan kita.
+                    <i class="fas fa-quote-right text-right text-light-gray icon-medium margin-15px-bottom"></i>
+                  </p>
+                  <!-- end blockquote -->
+                </div>
+
+                <div class="col-12 col-lg-8 pr-0 text-large md-no-padding-lr text-center text-md-left">
+                  <p class="text-large line-height-30 text-medium-gray text-center text-md-justify sm-line-height-26">{{newsDetail.body1}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->
+
+<!-- start parallax section -->
+<section class="wow fadeIn parallax p-0 height-400px md-height-200px sm-height-100px background-position-x-50 cover-background" data-stellar-background-ratio="0.5" [ngStyle]="{'background-image': 'url(' + imageUrl(newsDetail.imageBody) + ')'}">
+  <div class="container">
+      <div class="row">
+          <div class="col-12"></div>
+      </div>
+  </div>
+</section>
+<!-- end parallax section -->
+
+<!-- start section -->
+<section class="wow fadeIn">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-10 d-flex flex-wrap mx-auto last-paragraph-no-margin text-center text-md-left">
+                <div class="col-12 col-lg-5 pl-0 text-large md-no-padding-lr md-margin-30px-bottom">
+                    <p class="text-large line-height-30 text-medium-gray text-center text-md-justify sm-line-height-26">{{newsDetail.body2}}</p>
+                </div>
+
+                <div class="col-12 col-lg-7 pr-0 text-large md-no-padding-lr text-center text-md-left">
+                    <p class="text-large line-height-30 text-medium-gray text-center text-md-justify sm-line-height-26">{{newsDetail.body3}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section -->
+
+<!-- start portfolio slider section -->
+<section class="wow fadeIn bg-light-gray">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-12 text-center margin-40px-bottom sm-margin-20px-bottom">
+                <div class="position-relative overflow-hidden w-100">
+                    <p class="text-deep-pink text-outside-line-full alt-font font-weight-600 text-uppercase margin-20px-bottom" style="font-size: 2em;">Deskripsi Foto</p>
+                    <br>
+                    <span class="text-justify">{{newsDetail.otherImages.description}}</span>
+                </div>
+            </div>
+
+            <div class="col-12 hover-option4 margin-5px-bottom">
+                <div class="swiper-multy-row-container overflow-hidden">
+                    <div class="swiper-wrapper">
+
+                        <!-- start portfolio slider item -->
+                        <div class="swiper-slide grid-item">
+                          <figure>
+                              <div class="portfolio-img bg-extra-dark-gray">
+                                  <img [src]="formatImageSrc(newsDetail.otherImages.images1)" alt="img-1"/>
+                                </div>
+                          </figure>
+                        </div>
+                        <!-- end portfolio slider item -->
+
+                        <!-- start portfolio slider item -->
+                        <div class="swiper-slide grid-item">
+                          <figure>
+                              <div class="portfolio-img bg-extra-dark-gray">
+                                  <img [src]="formatImageSrc(newsDetail.otherImages.images2)" alt="img-2"/>
+                                </div>
+                          </figure>
+                        </div>
+                        <!-- end portfolio slider item -->
+
+                        <!-- start portfolio slider item -->
+                        <div class="swiper-slide grid-item">
+                          <figure>
+                              <div class="portfolio-img bg-extra-dark-gray">
+                                  <img [src]="formatImageSrc(newsDetail.otherImages.images3)" alt="img-3"/>
+                                </div>
+                          </figure>
+                        </div>
+                        <!-- end portfolio slider item -->
+
+                        <!-- start portfolio slider item -->
+                        <div class="swiper-slide grid-item">
+                          <figure>
+                              <div class="portfolio-img bg-extra-dark-gray">
+                                  <img [src]="formatImageSrc(newsDetail.otherImages.images4)" alt="img-4"/>
+                                </div>
+                          </figure>
+                        </div>
+                        <!-- end portfolio slider item -->
+                        
+                    </div>
+                    <!-- start slider pagination -->
+                    <div class="swiper-portfolio-prev swiper-button-black-highlight"><i class="ti-arrow-left"></i></div>
+                    <div class="swiper-portfolio-next swiper-button-black-highlight"><i class="ti-arrow-right"></i></div>
+                    <!-- end slider pagination -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end portfolio slider section -->

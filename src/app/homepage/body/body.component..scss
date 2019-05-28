@@ -1,0 +1,33 @@
+.img-mpkmb{
+    visibility: visible;
+}
+
+.slide-2-desc{
+    position: relative;
+    right: 15vw;
+}
+
+.img-hover{
+    opacity: 1;
+    transition: 0.2s;
+}
+
+.img-hover:hover{
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+.center-slide-1{
+    width: 50vw;
+    height: 50vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 768px){
+    .img-mpkmb{
+        visibility: hidden;
+    }
+}

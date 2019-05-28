@@ -1,0 +1,45 @@
+.logo-header-list{
+    padding-top: 2vh;
+    display: block;
+}
+
+.logo-header{
+    display: block;
+    width: 5vw;
+    height: auto;
+}
+
+.store-show{
+    display: none;
+}
+
+.store-hover{
+    color: #000000;
+}
+
+.store-hover:hover {
+    color: #ffffff;
+    transition: 0.2s;
+}
+
+.position-pc{
+    padding-top: 1vh;
+}
+
+@media screen and (max-width: 991px){
+    .logo-header-list{
+        display: none;
+    }
+
+    .logo-header{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+
+    .store-show{
+        display: block;
+    }
+}

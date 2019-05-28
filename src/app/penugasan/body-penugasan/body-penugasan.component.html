@@ -1,0 +1,250 @@
+<!-- start parallax hero section -->
+<section class="wow fadeIn p-0 parallax sm-background-image-center desktop-view" data-stellar-background-ratio="0.5" style="background-image: url('../../../assets/img/web/Penugasan/bg-penugasan.jpg')">
+  <div class="opacity-extra-medium bg-black"></div>
+  <div class="container-fluid position-relative full-screen">
+      <div class="slider-typography">
+          <div class="slider-text-middle-main">
+              <div class="slider-text-bottom">
+                  <div class="col-12 col-xl-6 col-lg-7 bg-deep-pink-opacity width-400px height-200px lg-padding-seven-lr padding-five-tb position-pc">
+                      <div class="box-separator-line width-180px bg-white lg-width-120px md-width-90px d-none d-lg-block"></div>
+  
+                      <h4 class="font-weight-600 alt-font text-white-2 width-95 md-width-100">Penugasan</h4>
+  
+                      <p class="text-large font-weight-300 text-white-2 width-75 lg-width-85 md-width-95 sm-width-100 d-none d-md-block">MPKMB IPB 56</p>
+                  </div> 
+                </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- end parallax hero section -->
+
+<!-- start page title section -->
+<section class="p-0 one-third-screen position-relative wow fadeIn mobile-view">
+    <div class="opacity-medium bg-extra-dark-gray z-index-0"></div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 one-third-screen d-flex flex-column justify-content-center page-title-large text-center">
+                <!-- start sub title -->
+                <span class="d-block text-white-2 opacity6 margin-10px-bottom alt-font">MPKMB IPB 56</span>
+                <!-- end sub title -->
+
+                <!-- start page title -->
+                <h1 class="alt-font text-white-2 font-weight-600 width-55 md-width-80 sm-width-100 mx-auto mb-0">Penugasan</h1>
+                <!-- end page title -->
+            </div>
+        </div>
+    </div>
+    <div class="swiper-auto-fade swiper-container z-index-minus2 position-absolute top-0 w-100 h-100">
+        <div class="swiper-wrapper">
+
+            <!-- start slider item -->
+            <div class="swiper-slide cover-background one-third-screen" style="background-image:url('../../../assets/img/web/Penugasan/bg-penugasan.jpg');"></div>
+            <!-- end slider item -->
+
+        </div>
+        <!-- <div class="swiper-pagination swiper-auto-pagination d-none"></div> -->
+    </div>
+</section>
+<!-- end page title section -->
+
+<!-- start tab style 01 section -->
+<section class="wow fadeIn">
+    <div class="container tab-style2">
+        <div class="row">
+            <div class="col-12">
+                <!-- start tab navigation -->
+                <ul class="nav nav-tabs alt-font text-uppercase text-small text-center font-weight-600 justify-content-center">
+                    <li class="nav-item" *ngFor="let data of categories; let i = index">
+                        <a class="nav-link" href="#tab_sec{{i+1}}" data-toggle="tab">{{data?.category.name}}</a>
+                    </li>
+                </ul>
+                <!-- end tab navigation -->
+            </div>
+        </div>                                
+        <div class="tab-content">
+
+            <!-- start tab content -->
+            <div class="tab-pane fade in active show" id="tab_sec1">
+                <div class="row align-items-center">
+
+                  <!-- start item -->
+                  <div class="col-12 col-md-4 sm-margin-30px-bottom" *ngFor="let data of categories[0].tasks">
+                    <figure>
+                        <div class="portfolio-img bg-white position-relative text-center overflow-hidden">
+                            <a>
+                                <img [src]="formatImageSrc(data?.img)" alt="" style="width: 375px; height: 300px;"/>
+                            </a>
+                        </div>
+                        <figcaption class="bg-white" style="padding-top: 3vh;">
+                            <div class="portfolio-hover-main text-center">
+                                <div class="portfolio-hover-box align-middle">
+                                    <div class="portfolio-hover-content position-relative">
+                                        <a href="{{data?.url}}" target="_blank">
+                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">{{data?.title}}</span>
+                                          <p>{{data?.description}}<br><span class="text-deep-pink">Download</span></p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                  </div>
+                  <!-- end item -->
+
+                </div>
+            </div>
+            <!-- end tab content -->
+
+            <!-- start tab content -->
+            <div *ngFor="let categories of categories; let i = index" class="tab-pane fade in show" id="tab_sec{{i+1}}">
+                <div class="row align-items-center">
+
+                  <!-- start item -->
+                  <div class="col-12 col-md-4 sm-margin-30px-bottom" *ngFor="let data of categories.tasks">
+                    <figure>
+                        <div class="portfolio-img bg-white position-relative text-center overflow-hidden">
+                            <a>
+                                <img [src]="formatImageSrc(data?.img)" alt="" style="width: 375px; height: 300px;"/>
+                            </a>
+                        </div>
+                        <figcaption class="bg-white" style="padding-top: 3vh;">
+                            <div class="portfolio-hover-main text-center">
+                                <div class="portfolio-hover-box align-middle">
+                                    <div class="portfolio-hover-content position-relative">
+                                        <a href="{{data?.url}}" target="_blank">
+                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">{{data?.title}}</span>
+                                          <p>{{data?.description}}<br><span class="text-deep-pink">Download</span></p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                  </div>
+                  <!-- end item -->
+
+                </div>
+            </div>
+            <!-- end tab content -->
+            
+        </div>       
+    </div>
+</section>
+<!-- end tab style 01 section -->
+
+<!-- start blockquote style 02 section -->
+<section class="wow fadeIn bg-light-gray">
+    <div class="container">
+        <div class="row text-center justify-content-center">
+            <div class="col-12 col-lg-8">
+                <!-- start blockquote -->
+                <h5 class="text-extra-dark-gray margin-50px-bottom md-margin-20px-bottom alt-font">
+                  <i class="fas fa-quote-left text-light-gray icon-large margin-15px-bottom"></i>
+                  Apa yang mendefinisikan siapa kita, tidak ada artinya dibandingkan apa yang menyatukan kita.
+                  <i class="fas fa-quote-right text-right text-light-gray icon-large margin-15px-bottom"></i>
+                </h5>
+                <!-- end blockquote -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end blockquote style 02 section -->
+
+<!-- start Event Timeline section --> 
+<section class="wow fadeIn">
+    <div class="container" style="height: 50vh;"> 
+        <div class="row"> 
+            <div class="col-12">
+                <div class="swiper-number-pagination swiper-container black-move">
+                    <div class="bg-transparent-white opacity-full-dark z-index-5 d-none d-lg-block"></div>
+                    <div class="col-12 col-lg-12 text-center">
+                        <div class="position-relative overflow-hidden w-100">
+                            <span class="text-large text-outside-line-full alt-font font-weight-600 text-uppercase">Timeline Terdekat</span>
+                        </div>
+                    </div>
+                    <div class="swiper-wrapper">
+
+                        <!-- start slider item -->
+                        <div class="swiper-slide">
+                            <div class="slider-half-small-screen position-relative bg-white">
+                                <div class="slider-typography text-left">
+                                    <div class="slider-text-middle-main">
+                                        <div class="slider-text-middle">
+                                            <span class="text-extra-large text-middle-line font-weight-300 text-deep-pink d-block w-50 sm-width-65">{{timelines[0]?.date | date:'dd MMMM yyyy'}}</span>
+                                            <h2 class="text-extra-dark-gray w-50 d-inline-block font-weight-300 letter-spacing-minus-1 lg-width-70 sm-width-80">{{timelines[0]?.title}}</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end slider item -->
+
+                        <!-- start slider item -->
+                        <div class="swiper-slide">
+                            <div class="slider-half-small-screen position-relative bg-white">
+                                <div class="slider-typography text-left">
+                                    <div class="slider-text-middle-main">
+                                        <div class="slider-text-middle">
+                                            <span class="text-extra-large text-middle-line font-weight-300 text-deep-pink d-block w-50 sm-width-65">{{timelines[1]?.date | date:'dd MMMM yyyy'}}</span>
+                                            <h2 class="text-extra-dark-gray w-50 d-inline-block font-weight-300 letter-spacing-minus-1 lg-width-70 sm-width-80">{{timelines[1]?.title}}</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end slider item -->
+
+                        <!-- start slider item -->
+                        <div class="swiper-slide">
+                            <div class="slider-half-small-screen position-relative bg-white">
+                                <div class="slider-typography text-left">
+                                    <div class="slider-text-middle-main">
+                                        <div class="slider-text-middle">
+                                            <span class="text-extra-large text-middle-line font-weight-300 text-deep-pink d-block w-50 sm-width-65">{{timelines[2]?.date | date:'dd MMMM yyyy'}}</span>
+                                            <h2 class="text-extra-dark-gray w-50 d-inline-block font-weight-300 letter-spacing-minus-1 lg-width-70 sm-width-80">{{timelines[2]?.title}}</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end slider item -->
+
+                    </div>
+                    <div class="swiper-pagination swiper-number"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end Event Timeline section --> 
+        
+<!-- start slider section -->
+<section id="homepage-1" class="no-padding main-slider mobile-height wow fadeIn" style="max-height: 40vh;">
+    <div class="swiper-container width-100">
+        <div class="swiper-wrapper">
+
+            <!-- start slider item -->
+            <div class="swiper-slide cover-background" style="background-image:url('../../../assets/img/galeri/mpkmb-7.webp');">
+                <div style="background-color: rgba(0,0,0,0.5)">
+                    <div class="container position-relative full-screen">
+                        <div class="row">
+                            <div class="col-md-10 slider-typography text-center text-md-left">
+                                <div class="slider-text-middle-main">
+                                    <div class="slider-text-middle">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>            
+                </div>
+            </div>
+            <!-- end slider item -->
+
+        </div>
+    </div>
+</section>
+<!-- end slider section --> 
+
+
+
