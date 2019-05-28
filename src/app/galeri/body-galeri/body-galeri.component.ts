@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TimelineService } from 'src/app/services/timeline.service';
+import { GaleriService } from 'src/app/services/galeri.service';
+import { DomSanitizer } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-body-galeri',
@@ -8,12 +11,18 @@ import { TimelineService } from 'src/app/services/timeline.service';
 })
 export class BodyGaleriComponent implements OnInit {
 
-  constructor(public timeline: TimelineService) {   }
+  constructor(public timeline: TimelineService, public galeri: GaleriService, private sanitizer: DomSanitizer) {   }
 
   timelines = [];
+  galeries = [];
+  videos = [];
+  categories = [];
 
   ngOnInit() {
     this.getTimeline();
+    this.getGaleriesImages();
+    this.getCategory();
+    this.getVideos();
   }
 
   getTimeline(){
@@ -35,4 +44,38 @@ export class BodyGaleriComponent implements OnInit {
 
   }
 
+  getGaleriesImages(){
+    this.galeri.getAllGaleriesImages().subscribe((data)=>{
+      this.galeries = data.imageGalery;
+
+      console.log("Cek Galeri : ", this.galeries);
+    });
+  }
+
+  getCategory(){
+    this.galeri.getAllCategories().subscribe((data)=>{
+      this.categories = data.categories;
+
+      console.log("Cek Kategori : ", this.categories);
+    });
+  }
+
+  getVideos(){
+    this.galeri.getAllVideos().subscribe((data)=>{
+      this.videos = data.videoGaleries;
+
+      console.log("Cek Videos : ", this.videos);
+    });
+  }
+
+  videoUrl(i) {
+    let url = this.videos[i].url;
+    return this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + url);
+  }  
+
+  imageUrl(data) {
+    let link = data;
+    return this.sanitizer.bypassSecurityTrustResourceUrl(link);
+  }  
+  
 }

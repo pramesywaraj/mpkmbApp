@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TimelineService } from 'src/app/services/timeline.service';
+import { ConfigService } from 'src/app/services/config.service';
 
 @Component({
   selector: 'app-body-buku',
@@ -8,7 +9,7 @@ import { TimelineService } from 'src/app/services/timeline.service';
 })
 export class BodyBukuComponent implements OnInit {
 
-  constructor(public timeline: TimelineService) {   }
+  constructor(public timeline: TimelineService, public config: ConfigService) {   }
 
   timelines = [];
 

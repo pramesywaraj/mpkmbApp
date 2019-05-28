@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ConfigService } from 'src/app/services/config.service';
+import { StoreService } from 'src/app/services/store.service';
 
 @Component({
   selector: 'app-body-store',
@@ -9,11 +10,21 @@ import { ConfigService } from 'src/app/services/config.service';
 })
 export class BodyStoreComponent implements OnInit {
 
-  constructor(private httpClient: HttpClient, private configService: ConfigService) { }
+  constructor(private httpClient: HttpClient, private configService: ConfigService, public store: StoreService) { }
+
+  stores = [];
 
   ngOnInit() {
-    let url = this.configService.baseUrl
-    console.log("Cek : ", url);
+    this.getItem();
   }
+
+  getItem(){
+    this.store.getStoreItem().subscribe((data)=>{
+      this.stores = data.stores.docs;
+
+      console.log("Cek Items : ", this.stores);
+    });
+  }
+
 
 }

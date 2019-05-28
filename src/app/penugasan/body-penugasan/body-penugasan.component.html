@@ -55,12 +55,9 @@
             <div class="col-12">
                 <!-- start tab navigation -->
                 <ul class="nav nav-tabs alt-font text-uppercase text-small text-center font-weight-600 justify-content-center">
-                    <li class="nav-item"><a class="nav-link active" href="#tab_sec1" data-toggle="tab">Saga 1</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#tab_sec2" data-toggle="tab">Saga 2</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#tab_sec3" data-toggle="tab">Saga 3</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#tab_sec4" data-toggle="tab">Saga 4</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#tab_sec5" data-toggle="tab">Saga 5</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#individu" data-toggle="tab">Individu</a></li>
+                    <li class="nav-item" *ngFor="let data of categories; let i = index">
+                        <a class="nav-link" href="#tab_sec{{i+1}}" data-toggle="tab">{{data?.category.name}}</a>
+                    </li>
                 </ul>
                 <!-- end tab navigation -->
             </div>
@@ -68,35 +65,11 @@
         <div class="tab-content">
 
             <!-- start tab content -->
-            <div class="tab-pane med-text fade in active show" id="tab_sec1">
+            <div class="tab-pane fade in active show" id="tab_sec1">
                 <div class="row align-items-center">
 
                   <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="../../../assets/img/galeri/mpkmb-5.webp" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Panduan Penugasan</span>
-                                          <p>MPKMB IPB 56 <br><span class="text-deep-pink">Kelompok dan Karya</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
+                  <div class="col-12 col-md-4 sm-margin-30px-bottom" *ngFor="let data of categories[0].tasks">
                     <figure>
                         <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
                             <a href="#">
@@ -107,257 +80,9 @@
                             <div class="portfolio-hover-main text-center">
                                 <div class="portfolio-hover-box align-middle">
                                     <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-                  
-                </div>
-            </div>
-            <!-- end tab content -->
-
-            <!-- start tab content -->
-            <div class="tab-pane fade in" id="tab_sec2">
-                <div class="row align-items-center">
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-                  
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
+                                        <a href="{{data?.url}}" target="_blank">
+                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">{{data?.title}}</span>
+                                          <p>{{data?.description}}<br><span class="text-deep-pink">Download</span></p>
                                         </a>
                                     </div>
                                 </div>
@@ -372,11 +97,11 @@
             <!-- end tab content -->
 
             <!-- start tab content -->
-            <div class="tab-pane fade in" id="tab_sec3">
+            <div *ngFor="let categories of categories; let i = index" class="tab-pane fade in show" id="tab_sec{{i+1}}">
                 <div class="row align-items-center">
 
                   <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
+                  <div class="col-12 col-md-4 sm-margin-30px-bottom" *ngFor="let data of categories.tasks">
                     <figure>
                         <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
                             <a href="#">
@@ -387,337 +112,9 @@
                             <div class="portfolio-hover-main text-center">
                                 <div class="portfolio-hover-box align-middle">
                                     <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-                  
-                </div>
-            </div>
-            <!-- end tab content -->
-
-            <!-- start tab content -->
-            <div class="tab-pane fade in" id="tab_sec4">
-                <div class="row align-items-center">
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-                  
-                </div>
-            </div>
-            <!-- end tab content -->
-
-            <!-- start tab content -->
-            <div class="tab-pane fade in" id="tab_sec5">
-                <div class="row align-items-center">
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
+                                        <a href="{{data?.url}}" target="_blank">
+                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">{{data?.title}}</span>
+                                          <p>{{data?.description}}<br><span class="text-deep-pink">Download</span></p>
                                         </a>
                                     </div>
                                 </div>
@@ -730,135 +127,7 @@
                 </div>
             </div>
             <!-- end tab content -->
-
-            <!-- start tab content -->
-            <div class="tab-pane fade in" id="individu">
-                <div class="row align-items-center">
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-
-                  <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom">
-                    <figure>
-                        <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden">
-                            <a href="#">
-                                <img src="http://placehold.it/375x300" alt="" style="width: 375px; height: 300px;"/>
-                            </a>
-                        </div>
-                        <figcaption class="bg-white" style="padding-top: 3vh;">
-                            <div class="portfolio-hover-main text-center">
-                                <div class="portfolio-hover-box align-middle">
-                                    <div class="portfolio-hover-content position-relative">
-                                        <a href="#">
-                                          <span class="line-height-normal font-weight-600 text-medium alt-font margin-5px-bottom text-extra-dark-gray text-uppercase d-block">Judul</span>
-                                          <p>Deskripsi singkat <br><span class="text-deep-pink">Kategori</span></p>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                  </div>
-                  <!-- end item -->
-                  
-                </div>
-            </div>
-            <!-- end tab content -->
-
+            
         </div>       
     </div>
 </section>
@@ -882,32 +151,73 @@
 </section>
 <!-- end blockquote style 02 section -->
 
-<!-- start feature box section -->
-<section class="p-0 wow fadeIn bg-extra-dark-gray">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-lg-6 cover-background md-height-500px sm-height-350px wow fadeIn" style="background-image:url('../../../assets/img/galeri/mpkmb-3.webp');"><div class="sm-height-400px"></div></div>
+<!-- start Event Timeline section --> 
+<section class="wow fadeIn">
+    <div class="container" style="height: 50vh;"> 
+        <div class="row"> 
+            <div class="col-12">
+                <div class="swiper-number-pagination swiper-container black-move">
+                    <div class="bg-transparent-white opacity-full-dark z-index-5 d-none d-lg-block"></div>
+                    <div class="col-12 col-lg-12 text-center">
+                        <div class="position-relative overflow-hidden w-100">
+                            <span class="text-large text-outside-line-full alt-font font-weight-600 text-uppercase">Timeline Terdekat</span>
+                        </div>
+                    </div>
+                    <div class="swiper-wrapper">
 
-            <div class="col-12 col-lg-6 padding-five-tb padding-five-half-lr lg-padding-50px-tb md-padding-70px-tb md-padding-15px-lr wow fadeIn">
-                <div class="row m-0">
-                <div class="col-12 margin-four-bottom lg-margin-six-bottom md-margin-40px-bottom sm-margin-30px-bottom sm-no-padding-lr text-center text-md-center">
-                    <h4 class="alt-font text-white-2 text-center text-lg-center md-width-70 mx-auto mx-lg-0 md-no-margin-bottom sm-width-100 font-weight-700">Timeline Terdekat</h4>
-                </div>
+                        <!-- start slider item -->
+                        <div class="swiper-slide">
+                            <div class="slider-half-small-screen position-relative bg-white">
+                                <div class="slider-typography text-left">
+                                    <div class="slider-text-middle-main">
+                                        <div class="slider-text-middle">
+                                            <span class="text-extra-large text-middle-line font-weight-300 text-deep-pink d-block w-50 sm-width-65">{{timelines[0]?.date | date:'dd MMMM yyyy'}}</span>
+                                            <h2 class="text-extra-dark-gray w-50 d-inline-block font-weight-300 letter-spacing-minus-1 lg-width-70 sm-width-80">{{timelines[0]?.title}}</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end slider item -->
 
-                <!-- start feature box item -->
-                <div class="col-12 col-xl-12 col-lg-12 col-md-12 margin-six-bottom md-margin-30px-bottom sm-no-padding last-paragraph-no-margin text-center text-md-left" *ngFor="let data of timelines; let i = index">
-                    <div class="text-light-gray margin-10px-bottom md-margin-5px-bottom alt-font"><span class="text-deep-pink margin-15px-right float-left text-large d-block d-md-inline-block sm-width-100">{{data.date | date:'dd MMMM yyyy'}} &minus; {{data.title}}</span></div>
-                    <br>
-                    <p>{{data.body}}</p>
+                        <!-- start slider item -->
+                        <div class="swiper-slide">
+                            <div class="slider-half-small-screen position-relative bg-white">
+                                <div class="slider-typography text-left">
+                                    <div class="slider-text-middle-main">
+                                        <div class="slider-text-middle">
+                                            <span class="text-extra-large text-middle-line font-weight-300 text-deep-pink d-block w-50 sm-width-65">{{timelines[1]?.date | date:'dd MMMM yyyy'}}</span>
+                                            <h2 class="text-extra-dark-gray w-50 d-inline-block font-weight-300 letter-spacing-minus-1 lg-width-70 sm-width-80">{{timelines[1]?.title}}</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end slider item -->
+
+                        <!-- start slider item -->
+                        <div class="swiper-slide">
+                            <div class="slider-half-small-screen position-relative bg-white">
+                                <div class="slider-typography text-left">
+                                    <div class="slider-text-middle-main">
+                                        <div class="slider-text-middle">
+                                            <span class="text-extra-large text-middle-line font-weight-300 text-deep-pink d-block w-50 sm-width-65">{{timelines[2]?.date | date:'dd MMMM yyyy'}}</span>
+                                            <h2 class="text-extra-dark-gray w-50 d-inline-block font-weight-300 letter-spacing-minus-1 lg-width-70 sm-width-80">{{timelines[2]?.title}}</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end slider item -->
+
+                    </div>
+                    <div class="swiper-pagination swiper-number"></div>
                 </div>
-                <!-- end feature box item -->
-                
-                </div>
-            </div> 
+            </div>
         </div>
     </div>
 </section>
-<!-- end feature box section -->
+<!-- end Event Timeline section --> 
         
 <!-- start slider section -->
 <section id="homepage-1" class="no-padding main-slider mobile-height wow fadeIn" style="max-height: 40vh;">

@@ -20,11 +20,23 @@ export class BeritaService {
 
   public getAllNews(): Observable<any> {
     return this.http.get<any>(
-      this.configService.baseUrl + 'news/gets?page=1&limit=5&select=title summary imageCover&sort=-1')
+      this.configService.baseUrl + 'news/gets?page=1&limit=1000&select=title summary imageCover&sort=-1')
       .pipe(
         map(resp => {
           return resp;
         })
       );
   }  
+
+  public getNewsDetail(id): Observable<any> {
+    return this.http.get<any>(
+      this.configService.baseUrl + 'news/get/' + id
+    ).pipe(
+      map(
+        resp => {
+          return resp;
+        }
+      ),
+    ); 
+  }
 }
