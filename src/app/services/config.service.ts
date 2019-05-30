@@ -8,8 +8,8 @@ export class ConfigService {
   baseUrl: string;
 
   constructor() { 
-    // this.baseUrl = "http://backend-mpkmb.codepanda.id/";
-    this.baseUrl = "http://localhost:3000/";
+    this.baseUrl = "http://backend-mpkmb.codepanda.id/";
+    // this.baseUrl = "http://localhost:3000/";
     
   }
 }
