@@ -113,9 +113,9 @@
                       <div class="row justify-content-center">
                           <div class="col-12 col-lg-8 wow fadeIn text-center">
                               <div id="success-contact-form-2" class="mx-0"></div>
-                                <input type="text" formControlName="fullName" id="fullName" placeholder="Nama Lengkap*" class="input-border-bottom">
+                                <input type="text" formControlName="fullName" id="fullName" placeholder="Nama Lengkap*" class="input-border-bottom" required>
 
-                                <select formControlName="faculty" id="faculty" class="input-border-bottom">
+                                <select formControlName="faculty" id="faculty" class="input-border-bottom" required>
                                     <option value="">Fakultas*</option>
                                     <option value="FAPERTA">FAPERTA</option>
                                     <option value="FKH">FKH</option>
@@ -129,11 +129,11 @@
                                     <option value="SB">SB</option>
                                 </select>
 
-                                <input type="email" formControlName="email" id="email" placeholder="E-mail*" class="input-border-bottom">
+                                <input type="email" formControlName="email" id="email" placeholder="E-mail*" class="input-border-bottom" required>
 
-                                <input type="text" id="contact" formControlName="contact" placeholder="ID Line / WhatsApp*" class="input-border-bottom">
+                                <input type="text" id="contact" formControlName="contact" placeholder="ID Line / WhatsApp*" class="input-border-bottom" required>
 
-                                <textarea id="items" formControlName="items" placeholder="Barang yang Dipesan*" class="input-border-bottom"></textarea>
+                                <textarea id="items" formControlName="items" placeholder="Barang yang Dipesan*" class="input-border-bottom" required></textarea>
 
                                 <button id="contact-us-button-2" [disabled]="!orderItem.valid" type="submit" class="btn btn-dark-gray btn-rounded btn-small no-margin-lr">Pesan Sekarang</button>
                           </div>
