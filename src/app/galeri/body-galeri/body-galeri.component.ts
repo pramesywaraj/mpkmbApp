@@ -11,7 +11,9 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class BodyGaleriComponent implements OnInit {
 
-  constructor(public timeline: TimelineService, public galeri: GaleriService, private sanitizer: DomSanitizer) {   }
+  constructor(public timeline: TimelineService, public galeri: GaleriService, private sanitizer: DomSanitizer) { 
+    this.getTimeline();
+   }
 
   timelines = [];
   galeries = [];
@@ -19,7 +21,6 @@ export class BodyGaleriComponent implements OnInit {
   categories = [];
 
   ngOnInit() {
-    this.getTimeline();
     this.getGaleriesImages();
     this.getCategory();
     this.getVideos();
