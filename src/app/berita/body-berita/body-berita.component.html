@@ -23,7 +23,7 @@
             <!-- end slider item -->
 
             <!-- start slider item -->
-            <div class="swiper-slide cover-background" style="background-image:url('../../../assets/img/web/Berita/bg-berita.jpg');">
+            <div class="swiper-slide cover-background" [ngStyle]="{'background-image': 'url(' + imageUrl(allNews[0]?.imageCover) + ')'}">
                 <div class="cover-background" style="background-color: rgba(0,0,0,0.5);">
                     <div class="container position-relative full-screen">
                         <div class="col-md-12 slider-typography text-center text-md-left">
@@ -45,7 +45,7 @@
             <!-- end slider item -->
 
             <!-- start slider item -->
-            <div class="swiper-slide cover-background" style="background-image:url('../../../assets/img/web/Berita/bg-berita.jpg');">
+            <div class="swiper-slide cover-background" [ngStyle]="{'background-image': 'url(' + imageUrl(allNews[1]?.imageCover) + ')'}">
                 <div class="cover-background" style="background-color: rgba(0,0,0,0.5);">
                     <div class="container position-relative full-screen">
                         <div class="col-md-12 slider-typography text-center text-md-left">
@@ -66,7 +66,7 @@
             <!-- end slider item -->
 
             <!-- start slider item -->
-            <div class="swiper-slide cover-background" style="background-image:url('../../../assets/img/web/Berita/bg-berita.jpg');">
+            <div class="swiper-slide cover-background" [ngStyle]="{'background-image': 'url(' + imageUrl(allNews[2]?.imageCover) + ')'}">
                 <div class="cover-background" style="background-color: rgba(0,0,0,0.5);">
                     <div class="container position-relative full-screen">
                         <div class="col-md-12 slider-typography text-center text-md-left">

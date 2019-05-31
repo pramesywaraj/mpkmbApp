@@ -94,4 +94,11 @@ export class BodyBeritaComponent implements OnInit {
     localStorage.setItem('newsDetail', JSON.stringify(data));
     console.log("Cek News Detail : ", data);
   }
+
+  imageUrl(data) {
+    let link =  this.formatImageSrc(data);
+    console.log("Cek Link : ", link);
+    return link
+    // return this.sanitizer.bypassSecurityTrustStyle('url(' + link + ')');
+  }    
 }
