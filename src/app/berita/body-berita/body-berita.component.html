@@ -110,7 +110,7 @@
                             <div (click)="getData(data)" class="grid-item wow zoomIn">
                                 <a href="artikel/{{data._id}}" target="_blank">
                                     <figure>
-                                        <img [src]="formatImageSrc(data?.imageCover)" alt="" style="width: 300px; height: 300px"/>
+                                        <img class="image-cropping" [src]="formatImageSrc(data?.imageCover)" alt="" style="width: 300px; height: 300px"/>
                                         <figcaption style="margin-bottom: 3vh;">
                                             <div class="portfolio-hover-main text-center">
                                                 <div class="portfolio-hover-box vertical-align-bottom">
