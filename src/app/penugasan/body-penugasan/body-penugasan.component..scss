@@ -5,6 +5,8 @@
 
 .desktop-view{
     display: block;
+    min-height: 100vh;
+    max-height: 100vh;
 }
 
 .mobile-view{

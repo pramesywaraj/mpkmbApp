@@ -1,12 +1,12 @@
 .position-pc{
     margin-left: 60vw;
-    min-height: 100vh;
-    max-height: 100vh;
     visibility: visible;
 }
 
 .desktop-view{
     display: block;
+    min-height: 100vh;
+    max-height: 100vh;
 }
 
 .mobile-view{
