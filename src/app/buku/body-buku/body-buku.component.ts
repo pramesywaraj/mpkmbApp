@@ -46,7 +46,7 @@ export class BodyBukuComponent implements OnInit {
       
         this.timelines.push({"id": id, "date": date, "title": title, "body": body})
       }
-      console.log("Cek Timelines : ", this.timelines);
+      // console.log("Cek Timelines : ", this.timelines);
     });
 
   }
@@ -55,7 +55,7 @@ export class BodyBukuComponent implements OnInit {
     this.buku.postOrderItem(this.orderBuku.value).subscribe((data) => {
       alert("Pemesanan berhasil Direkam")
       window.location.reload();
-      console.log("Cek Pesan : ", data)
+      // console.log("Cek Pesan : ", data)
     },
     err => {
       console.log('err', err);

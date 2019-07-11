@@ -30,13 +30,13 @@ export class BodyComponent implements OnInit {
       
         this.timelines.push({"id": id, "date": date, "title": title, "body": body})
       }
-      console.log("Cek Timelines : ", this.timelines);
+      // console.log("Cek Timelines : ", this.timelines);
     });
 
   }
 
   scrollToElement($element): void {
-    console.log($element);
+    // console.log($element);
     $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   }
 

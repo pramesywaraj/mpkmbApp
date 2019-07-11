@@ -43,7 +43,7 @@ export class BodyPenugasanComponent implements OnInit {
       
         this.timelines.push({"id": id, "date": date, "title": title, "body": body})
       }
-      console.log("Cek Timelines : ", this.timelines);
+      // console.log("Cek Timelines : ", this.timelines);
     });
 
   }
@@ -52,7 +52,7 @@ export class BodyPenugasanComponent implements OnInit {
     this.penugasan.getCategories().subscribe((data)=>{
       this.categories = data.categories;
 
-      console.log("Cek Kategori : ", this.categories);
+      // console.log("Cek Kategori : ", this.categories);
     });
   }
 

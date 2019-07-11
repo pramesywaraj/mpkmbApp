@@ -21,7 +21,7 @@ export class BodyArtikelComponent implements OnInit {
 
   ngOnInit() {
     this.dataLocal = JSON.parse(localStorage.getItem('newsDetail'));
-    console.log("Cek Data Local : ", this.dataLocal);
+    // console.log("Cek Data Local : ", this.dataLocal);
 
     this.getNewsDetail(this.dataLocal._id);
 
@@ -39,13 +39,13 @@ export class BodyArtikelComponent implements OnInit {
   getNewsDetail(id) {
     this.berita.getNewsDetail(id).subscribe(data => {
       this.newsDetail = data.news;
-      console.log("Cek Detail Berita : ", this.newsDetail);
+      // console.log("Cek Detail Berita : ", this.newsDetail);
     });
   }  
 
   imageUrl(data) {
     let link =  this.formatImageSrc(data);
-    console.log("Cek Link : ", link);
+    // console.log("Cek Link : ", link);
     return link
     // return this.sanitizer.bypassSecurityTrustStyle('url(' + link + ')');
   }  

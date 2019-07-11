@@ -27,7 +27,7 @@ export class BodyBeritaComponent implements OnInit {
 
   ngOnInit() {
     this.dataLocal = JSON.parse(localStorage.getItem('newsDetail'));
-    console.log("Cek Data Local : ", this.dataLocal);
+    // console.log("Cek Data Local : ", this.dataLocal);
 
     this.getTimeline();
     this.getAllNews();
@@ -70,7 +70,7 @@ export class BodyBeritaComponent implements OnInit {
 
       this.allNews = data.news.docs
 
-      console.log("Cek All News : ", data)
+      // console.log("Cek All News : ", data)
 
       // News Highlight
       let highlight_1 = 2;
@@ -92,12 +92,12 @@ export class BodyBeritaComponent implements OnInit {
 
   getData(data){
     localStorage.setItem('newsDetail', JSON.stringify(data));
-    console.log("Cek News Detail : ", data);
+    // console.log("Cek News Detail : ", data);
   }
 
   imageUrl(data) {
     let link =  this.formatImageSrc(data);
-    console.log("Cek Link : ", link);
+    // console.log("Cek Link : ", link);
     return link
     // return this.sanitizer.bypassSecurityTrustStyle('url(' + link + ')');
   }    

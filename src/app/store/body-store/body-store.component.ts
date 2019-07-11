@@ -46,7 +46,7 @@ export class BodyStoreComponent implements OnInit {
     this.store.getStoreItem().subscribe((data)=>{
       this.stores = data.stores.docs;
 
-      console.log("Cek Items : ", this.stores);
+      // console.log("Cek Items : ", this.stores);
     });
   }
 
@@ -54,7 +54,7 @@ export class BodyStoreComponent implements OnInit {
     this.store.postOrderItem(this.orderItem.value).subscribe((data) => {
       alert("Pemesanan berhasil Direkam")
       window.location.reload();
-      console.log("Cek Pesan : ", data)
+      // console.log("Cek Pesan : ", data)
     },
     err => {
       console.log('err', err);
