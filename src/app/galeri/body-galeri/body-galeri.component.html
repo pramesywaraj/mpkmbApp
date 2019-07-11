@@ -46,7 +46,7 @@
                         <div>
                             <h6 class="text-medium-deep-pink text-deep-pink d-block margin-5px-bottom alt-font">Highlight</h6>
                             <h4 class="text-medium-white font-weight-500 margin-20px-bottom alt-font"  style="color: white;">Video MPKMB <br>IPB</h4>
-                            <p class="text-large text-justify d-block float-left font-weight-300 width-90 margin-35px-bottom" style="color: white;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, nobis, reiciendis labore placeat laudantium aperiam soluta veniam accusamus ea fuga necessitatibus cupiditate aut sint, debitis iste harum! Nihil, sunt doloremque.</p>
+                            <!-- <p class="text-large text-justify d-block float-left font-weight-300 width-90 margin-35px-bottom" style="color: white;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, nobis, reiciendis labore placeat laudantium aperiam soluta veniam accusamus ea fuga necessitatibus cupiditate aut sint, debitis iste harum! Nihil, sunt doloremque.</p> -->
                         </div>
                     </div>
                 </div>
@@ -128,7 +128,7 @@
                     <br>
                     <span class="text-extra-dark-gray text-outside-line-full alt-font font-weight-600 text-uppercase margin-20px-bottom" style="font-size: 3em;">.  .  .  Alive</span>
                     <br>
-                    <span class="text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora porro quisquam eius minus repellat! Iste rerum fugit odio tenetur laboriosam natus neque accusantium nulla explicabo! Asperiores ipsa soluta eligendi itaque.</span>
+                    <!-- <span class="text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora porro quisquam eius minus repellat! Iste rerum fugit odio tenetur laboriosam natus neque accusantium nulla explicabo! Asperiores ipsa soluta eligendi itaque.</span> -->
                 </div>
             </div>
             <div class="col-12">
@@ -164,11 +164,11 @@
             <!-- end tab content -->
 
             <!-- start tab content -->
-            <div *ngFor="let categories of categories; let i = index" class="tab-pane fade in show" id="tab_sec{{i+1}}">
+            <div *ngFor="let category of categories; let i = index" class="tab-pane fade in show" id="tab_sec{{i+1}}">
                 <div class="row align-items-center">
 
                   <!-- start item -->
-                  <div class="col-12 col-md-4 sm-margin-30px-bottom" *ngFor="let data of categories.images">
+                  <div class="col-12 col-md-4 sm-margin-30px-bottom" *ngFor="let data of category.images">
                     <figure>
                         <div class="portfolio-img bg-deep-pink position-relative text-center overflow-hidden" style="margin-bottom: 3vh;">
                             <a>

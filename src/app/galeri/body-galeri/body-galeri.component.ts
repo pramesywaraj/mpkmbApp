@@ -40,7 +40,7 @@ export class BodyGaleriComponent implements OnInit {
       
         this.timelines.push({"id": id, "date": date, "title": title, "body": body})
       }
-      console.log("Cek Timelines : ", this.timelines);
+      // console.log("Cek Timelines : ", this.timelines);
     });
 
   }
@@ -49,7 +49,7 @@ export class BodyGaleriComponent implements OnInit {
     this.galeri.getAllGaleriesImages().subscribe((data)=>{
       this.galeries = data.imageGalery;
 
-      console.log("Cek Galeri : ", this.galeries);
+      // console.log("Cek Galeri : ", this.galeries);
     });
   }
 
@@ -57,7 +57,7 @@ export class BodyGaleriComponent implements OnInit {
     this.galeri.getAllCategories().subscribe((data)=>{
       this.categories = data.categories;
 
-      console.log("Cek Kategori : ", this.categories);
+      // console.log("Cek Kategori : ", this.categories);
     });
   }
 
@@ -65,7 +65,7 @@ export class BodyGaleriComponent implements OnInit {
     this.galeri.getAllVideos().subscribe((data)=>{
       this.videos = data.videoGaleries;
 
-      console.log("Cek Videos : ", this.videos);
+      // console.log("Cek Videos : ", this.videos);
     });
   }
 
