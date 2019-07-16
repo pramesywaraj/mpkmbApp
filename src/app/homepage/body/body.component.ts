@@ -14,6 +14,7 @@ export class BodyComponent implements OnInit {
 
   ngOnInit() {
     this.getTimeline();
+    console.log("Cek timelines : ", this.timelines)
   }
 
   getTimeline(){
