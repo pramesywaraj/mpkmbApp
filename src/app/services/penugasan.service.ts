@@ -24,7 +24,8 @@ export class PenugasanService {
       .pipe(
         map(resp => {
           return resp;
-        })
+        }),  
+        // retry(3),
       );
   }  
 
@@ -34,7 +35,9 @@ export class PenugasanService {
       .pipe(
         map(resp => {
           return resp;
-        })
+        }),
+        // retry(3),
+
       );
   }  
 

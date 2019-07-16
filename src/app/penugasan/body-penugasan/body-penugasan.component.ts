@@ -3,6 +3,7 @@ import { TimelineService } from 'src/app/services/timeline.service';
 import { PenugasanService } from 'src/app/services/penugasan.service';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ConfigService } from 'src/app/services/config.service';
+import { retry } from 'rxjs/operators';
 
 @Component({
   selector: 'app-body-penugasan',
