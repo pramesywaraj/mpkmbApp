@@ -10,15 +10,13 @@ import { StoreComponent } from './store/store.component';
 import { ArtikelComponent } from './artikel/artikel.component';
 
 const routes: Routes = [
+  { path: '',
+    component: HomepageComponent,
+  },
   {
     path: 'homepage',
     component: HomepageComponent,
   },
-  { path: '',
-    redirectTo: 'homepage',
-    pathMatch: 'full'
-  },
-
   {
     path: 'buku',
     component: BukuComponent,
